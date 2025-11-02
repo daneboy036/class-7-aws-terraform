@@ -1,6 +1,10 @@
 resource "aws_route_table" "public-rt" {
   vpc_id = aws_vpc.myvpc.id
 
+  # there's also an aws_route resource
+  # looks like specifying it as a route inside the route table can lead to odd behavior or conflicts. This can result in the entire route table being dropped if you make changes to the routes
+
+  # to remove existing routes do route = []
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.igw.id

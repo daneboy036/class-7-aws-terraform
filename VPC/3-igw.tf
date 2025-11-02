@@ -7,4 +7,4 @@ resource "aws_internet_gateway" "igw" {
   }
 }
 
-# remembrer that igw is free to create and you pay for all outbound internet traffic
+# remember that igw is free to create and you pay for all outbound internet traffic

@@ -1,3 +1,4 @@
+# EC2 -> Dashboard -> Look under Service Health to see all available zones and their zone ids
 resource "aws_subnet" "public-us-east-1a" {
   vpc_id                  = aws_vpc.myvpc.id
   cidr_block              = "10.32.1.0/24"
